@@ -7,11 +7,8 @@
     "TYPO3"
   ],
   "require": {
-    "typo3/cms-core": "^12",
-    "bugsnag/bugsnag": "^3.29"
-  },
-  "replace": {
-    "typo3-ter/bugsnag": "self.version"
+    "typo3/cms-core": "^13 || ^14",
+    "bugsnag/bugsnag": "^3.30"
   },
   "autoload": {
     "psr-4": {
