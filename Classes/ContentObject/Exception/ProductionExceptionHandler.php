@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 namespace MichielRoos\Bugsnag\ContentObject\Exception;
 
 use MichielRoos\Bugsnag\Service\BugsnagService;
@@ -27,7 +28,7 @@ class ProductionExceptionHandler extends \TYPO3\CMS\Frontend\ContentObject\Excep
      * @return string
      * @throws \Exception
      */
-    public function handle(\Exception $exception, AbstractContentObject $contentObject = null, $contentObjectConfiguration = [])
+    public function handle(\Exception $exception, ?AbstractContentObject $contentObject = null, $contentObjectConfiguration = []): string
     {
         $bugsnagService = GeneralUtility::makeInstance(BugsnagService::class);
         $bugsnagService->sendException($exception);
