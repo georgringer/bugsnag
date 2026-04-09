@@ -46,17 +46,16 @@ Add the set as a dependency in your site's Set configuration and provide the fol
 
 | Setting | Description | Default |
 |---|---|---|
-| `bugsnag.performanceApiKey` | Bugsnag Performance API key | _(empty)_ |
+| `bugsnag.apiKey` | Bugsnag API key (overrides extension configuration) | _(empty)_ |
 | `bugsnag.path` | URL to the Bugsnag Performance JS bundle | `//d2wy8f7a9ursnm.cloudfront.net/v1/bugsnag-performance.min.js` |
 
 In `config/sites/{site}/settings.yaml`:
 
 ```yaml
-bugsnag:
-    performanceApiKey: '%env(BUGSNAG_PERFORMANCE_API_KEY)%'
+bugsnag.apiKey: '%env(BUGSNAG_API_KEY)%'
 ```
 
-The script is only rendered when `bugsnag.performanceApiKey` is set.
+The performance script is only rendered when `bugsnag.apiKey` is set.
 
 ## Issues
 

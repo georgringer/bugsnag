@@ -1,6 +1,6 @@
 settings:
-    bugsnag.performanceApiKey:
-        label: 'Bugsnag Performance API Key'
+    bugsnag.apiKey:
+        label: 'Bugsnag API Key (overrides extension configuration)'
         category: bugsnag
         default: ''
         type: string

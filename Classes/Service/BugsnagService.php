@@ -17,18 +17,44 @@ use TYPO3\CMS\Core\Utility\VersionNumberUtility;
  */
 class BugsnagService
 {
+    public function getApiKey(?Site $site = null): string
+    {
+        if ($site !== null) {
+            $siteApiKey = $site->getSettings()->get('bugsnag.apiKey', '');
+            if ($siteApiKey !== '') {
+                return $siteApiKey;
+            }
+        }
+        $extensionConfiguration = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['bugsnag'] ?? [];
+        return ($extensionConfiguration['apiKey'] ?? '') ?: (getenv('BUGSNAG_API_KEY') ?: '');
+    }
+
+    public function getApiKeySource(?Site $site = null): string
+    {
+        if ($site !== null && $site->getSettings()->get('bugsnag.apiKey', '') !== '') {
+            return 'site setting bugsnag.apiKey';
+        }
+        $extensionConfiguration = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['bugsnag'] ?? [];
+        if (!empty($extensionConfiguration['apiKey'])) {
+            return 'extension configuration';
+        }
+        if (getenv('BUGSNAG_API_KEY')) {
+            return 'environment variable BUGSNAG_API_KEY';
+        }
+        return 'not configured';
+    }
+
     /**
      * Sends exception to Bugsnag
      */
     public function sendException(\Throwable $exception): void
     {
-        $extensionConfiguration = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['bugsnag'];
-        $bugsnagApiKey = $extensionConfiguration['apiKey'] ?: (getenv('BUGSNAG_API_KEY') ?: '');
+        $request = $GLOBALS['TYPO3_REQUEST'] ?? null;
+        $site = $request?->getAttribute('site');
+        $bugsnagApiKey = $this->getApiKey($site instanceof Site ? $site : null);
 
         if ($bugsnagApiKey !== '') {
             $bugsnag = Client::make($bugsnagApiKey);
-
-            $request = $GLOBALS['TYPO3_REQUEST'] ?? null;
 
             if (PHP_SAPI === 'cli') {
                 $appType = 'CLI';
