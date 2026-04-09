@@ -1,5 +1,5 @@
 {
-	"name": "GeorgRinger/bugsnag",
+	"name": "georgringer/bugsnag",
 	"type": "typo3-cms-extension",
 	"description": "Bugsnag exception handler",
 	"keywords": [
