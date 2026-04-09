@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace MichielRoos\Bugsnag\Controller;
+namespace GeorgRinger\Bugsnag\Controller;
 
-use MichielRoos\Bugsnag\Exception;
-use MichielRoos\Bugsnag\Service\BugsnagService;
+use GeorgRinger\Bugsnag\Exception;
+use GeorgRinger\Bugsnag\Service\BugsnagService;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Backend\Routing\UriBuilder;

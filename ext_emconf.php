@@ -6,7 +6,7 @@ $EM_CONF['bugsnag'] = [
     'category' => 'fe',
     'author' => 'Michiel Roos',
     'author_company' => 'Michiel Roos',
-    'author_email' => 'michiel@michielroos.com',
+    'author_email' => 'michiel@GeorgRinger.com',
     'state' => 'stable',
     'version' => 'v12.0.0',
     'constraints' => [
@@ -15,6 +15,6 @@ $EM_CONF['bugsnag'] = [
         ],
     ],
     'autoload' => [
-        'psr-4' => ['MichielRoos\\Busnag\\' => 'Classes'],
+        'psr-4' => ['GeorgRinger\\Busnag\\' => 'Classes'],
     ],
 ];

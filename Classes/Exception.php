@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-namespace MichielRoos\Bugsnag;
+namespace GeorgRinger\Bugsnag;
 
 class Exception extends \TYPO3\CMS\Core\Exception {}

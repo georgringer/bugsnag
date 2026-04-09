@@ -1,6 +1,6 @@
 <?php
 
-namespace MichielRoos\Bugsnag\Service;
+namespace GeorgRinger\Bugsnag\Service;
 
 use Bugsnag\Client;
 use Bugsnag\Handler;

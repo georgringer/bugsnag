@@ -6,6 +6,6 @@ return [
         'backend',
     ],
     'imports' => [
-        '@michielroos/bugsnag/' => 'EXT:bugsnag/Resources/Public/ESM/',
+        '@GeorgRinger/bugsnag/' => 'EXT:bugsnag/Resources/Public/ESM/',
     ],
 ];

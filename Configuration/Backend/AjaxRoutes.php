@@ -3,6 +3,6 @@
 return [
     'bugsnag_test' => [
         'path' => 'bugsnag/test',
-        'target' => \MichielRoos\Bugsnag\Controller\BackendAjaxController::class . '::testAction',
+        'target' => \GeorgRinger\Bugsnag\Controller\BackendAjaxController::class . '::testAction',
     ],
 ];

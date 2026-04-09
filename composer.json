@@ -1,24 +1,24 @@
 {
-  "name": "michielroos/bugsnag",
-  "type": "typo3-cms-extension",
-  "description": "Bugsnag exception handler",
-  "version": "12.0",
-  "keywords": [
-    "TYPO3"
-  ],
-  "require": {
-    "typo3/cms-core": "^13 || ^14",
-    "bugsnag/bugsnag": "^3.30"
-  },
-  "autoload": {
-    "psr-4": {
-      "MichielRoos\\Bugsnag\\": "Classes"
-    }
-  },
-  "license": "GPL-2.0-or-later",
-  "extra": {
-    "typo3/cms": {
-      "extension-key": "bugsnag"
-    }
-  }
+	"name": "GeorgRinger/bugsnag",
+	"type": "typo3-cms-extension",
+	"description": "Bugsnag exception handler",
+	"keywords": [
+		"TYPO3",
+		"bugsnag"
+	],
+	"require": {
+		"typo3/cms-core": "^13 || ^14",
+		"bugsnag/bugsnag": "^3.30"
+	},
+	"autoload": {
+		"psr-4": {
+			"GeorgRinger\\Bugsnag\\": "Classes"
+		}
+	},
+	"license": "GPL-2.0-or-later",
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "bugsnag"
+		}
+	}
 }

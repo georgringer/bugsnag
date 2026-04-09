@@ -1,8 +1,8 @@
 <?php
 
-namespace MichielRoos\Bugsnag\Core\Error;
+namespace GeorgRinger\Bugsnag\Core\Error;
 
-use MichielRoos\Bugsnag\Service\BugsnagService;
+use GeorgRinger\Bugsnag\Service\BugsnagService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**

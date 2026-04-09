@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace MichielRoos\Bugsnag\ContentObject\Exception;
+namespace GeorgRinger\Bugsnag\ContentObject\Exception;
 
-use MichielRoos\Bugsnag\Service\BugsnagService;
+use GeorgRinger\Bugsnag\Service\BugsnagService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\AbstractContentObject;
 

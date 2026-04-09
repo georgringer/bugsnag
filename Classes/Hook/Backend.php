@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MichielRoos\Bugsnag\Hook;
+namespace GeorgRinger\Bugsnag\Hook;
 
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Http\ApplicationType;
@@ -15,7 +15,7 @@ class Backend
         if (($GLOBALS['TYPO3_REQUEST'] ?? null) instanceof ServerRequestInterface
             && ApplicationType::fromRequest($GLOBALS['TYPO3_REQUEST'])->isBackend()
         ) {
-            $pageRenderer->loadJavaScriptModule('@michielroos/bugsnag/test-exception.js');
+            $pageRenderer->loadJavaScriptModule('@GeorgRinger/bugsnag/test-exception.js');
         }
     }
 }
