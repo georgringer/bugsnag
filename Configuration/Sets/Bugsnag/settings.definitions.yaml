@@ -1,0 +1,11 @@
+settings:
+    bugsnag.performanceApiKey:
+        label: 'Bugsnag Performance API Key'
+        category: bugsnag
+        default: ''
+        type: string
+    bugsnag.path:
+        label: 'Bugsnag Performance Path'
+        category: bugsnag
+        default: '//d2wy8f7a9ursnm.cloudfront.net/v1/bugsnag-performance.min.js'
+        type: string
