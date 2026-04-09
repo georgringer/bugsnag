@@ -1,15 +1,12 @@
 <?php
+
 namespace MichielRoos\Bugsnag\Service;
 
 use Bugsnag\Client;
 use Bugsnag\Handler;
 
 /**
- * Class BugsnagService
- *
  * Sends Exception to Bugsnag
- *
- * @package MichielRoos\Bugsnag\Service
  */
 class BugsnagService
 {

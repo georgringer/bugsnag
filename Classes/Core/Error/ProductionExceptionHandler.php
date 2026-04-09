@@ -1,15 +1,12 @@
 <?php
+
 namespace MichielRoos\Bugsnag\Core\Error;
 
 use MichielRoos\Bugsnag\Service\BugsnagService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
- * Class ProductionExceptionHandler
- *
  * Sends Exception to Bugsnag
- *
- * @package MichielRoos\Bugsnag\Core\Error
  */
 class ProductionExceptionHandler extends \TYPO3\CMS\Core\Error\ProductionExceptionHandler
 {
